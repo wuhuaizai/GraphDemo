@@ -46,7 +46,7 @@ void CompDlg::OnBnClickedOk()
 	int rotate = GetDlgItemInt(IDC_ROTATEA);
 	CString magnifyp;
 	GetDlgItem(IDC_MAGNIFYP)->GetWindowText(magnifyp);
-	double m = atof(magnifyp)/100;
+	double m = _ttof(magnifyp)/100;
 	_cprintf("CompDlg::Entered::%d %d %d %lf\n", x, y,rotate,m);
 	CMainFrame* pFrame = (CMainFrame *)(AfxGetApp()->m_pMainWnd);
 	CDrawdemoView* pViw = (CDrawdemoView*)pFrame->GetActiveView();
